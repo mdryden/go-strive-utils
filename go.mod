@@ -1,4 +1,4 @@
-module github.com/mdryden/go-strive-utils
+module github.com/strivesolutions/go-strive-utils
 
 go 1.20
 

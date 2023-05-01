@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mdryden/go-strive-utils/pkg/async"
 	"github.com/stretchr/testify/assert"
+	"github.com/strivesolutions/go-strive-utils/pkg/async"
 )
 
 type asyncResult struct {
