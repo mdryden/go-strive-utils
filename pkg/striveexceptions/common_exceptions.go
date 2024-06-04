@@ -8,17 +8,20 @@ const (
 
 
 
-func ServerError(err error, message string, details string) Exception {
-    if message == "" {
-        message = ServerErrorMsg
+func ServerError(err error, message *string, details *string) Exception {
+    if message == nil {
+        msg := ServerErrorMsg
+        message = &msg
     }
-    if details == "" {
-        details = ServerErrorDetails
+    if details == nil {
+        msg := ServerErrorDetails
+        details = &msg
     }
+
     return Exception{
         FullError: err,
         Code:      ServerErrorCode,
-        Message:   message,
-        Details:   details,
+        Message:   *message,
+        Details:   *details,
     }
 }
