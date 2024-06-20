@@ -4,10 +4,11 @@ import "fmt"
 
 // Exception is a struct that contains the error message and the error code
 type Exception struct {
-	FullError error
-	Code    int    `json:"code"`
-	Message string `json:"message"`
-	Details string `json:"details"`
+	FullError  error
+	StatusCode int    `json:"statusCode"`
+	Code       int    `json:"code"`
+	Message    string `json:"message"`
+	Details    string `json:"details"`
 }
 
 func (e Exception) Error() string {
